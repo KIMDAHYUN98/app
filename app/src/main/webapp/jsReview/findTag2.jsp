@@ -8,14 +8,13 @@
 <script >
 function calc1() {
 	var table = document.getElementById("tbl1");
-	var trs = table.getElementsByTagName("tr");
 	var sum = 0;
-	for(i = 0; i < trs.length-1; i++) {
-		var score = trs[i].getElementsByTagName("td")[0].innerText;
+	for(i=0; i < table.rows.length - 1; i++) {
+		var score = table.rows[i].cells[0].innerText;
 		sum += parseInt(score);
 	}
-	console.log(sum);
-	trs[trs.length-1].getElementsByTagName("td")[0].innerText = sum;
+	console.log(sum)
+	table.rows[table.rows.length - 1].cells[0].innerText = sum;
 }
 
 function calc2(){

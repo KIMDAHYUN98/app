@@ -25,6 +25,19 @@
 		  }
 		  // 체크박스 과제
 		  // 체크된 갯수가 하나 이상인지 체크 (for) = count > 0
+		  var chk = document.myForm.hobby.length;
+		var count= 0;
+		for(i=0; i<chk; i++) {
+			if(document.myForm.hobby[i].checked == true) {
+				count++;
+			}
+		}
+		
+		if(count <= 0) {
+			alert("하나 이상 체크해야 합니다.")
+			return false;
+		}
+		  
 		  document.forms["myForm"].submit();
 		}
 	
